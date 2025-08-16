@@ -1,0 +1,35 @@
+spring:
+  mvc:
+    static-path-pattern: /**
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+  application:
+    name: bill-splitter
+  datasource:
+    url: jdbc:postgresql://greatstep.ru:9999/bill_splitter
+    username: postgres
+    password: djljgfl
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate.ddl-auto: validate
+  web:
+    resources:
+      static-locations: classpath:/static/
+
+jwt:
+  secret: f32b8e987dfcce10c46c360713d8ed09920f07176af0483662dca8b6ca6ff96e #for test
+  expiration: 60000000 # 1 minute
+
+#swagger:
+#  context:
+#    root: ''
+#
+#springdoc:
+#  swagger-ui:
+#    configUrl: ${swagger.context.root}/v3/api-docs/swagger-config
+#    url: ${swagger.context.root}/v3/api-docs
+
+server:
+  port: 8080
